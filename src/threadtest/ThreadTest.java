@@ -1,7 +1,8 @@
 package threadtest;
 
-class MyThread extends Thread
+public class ThreadTest extends Thread
 {
+
     public void run()
     {
         int i = 1;
@@ -11,13 +12,11 @@ class MyThread extends Thread
             i++;
         }
     }
-}
 
-public class ThreadTest
-{
+
     public static void main(String[] args)
     {
-        MyThread t = new MyThread();
+        ThreadTest t = new ThreadTest();
         t.start();
         int i = 1;
 
