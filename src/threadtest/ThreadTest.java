@@ -1,6 +1,6 @@
 package threadtest;
 
-public class ThreadTest extends Thread
+public class ThreadTest implements Runnable
 {
 
     public void run()
@@ -17,7 +17,8 @@ public class ThreadTest extends Thread
     public static void main(String[] args)
     {
         ThreadTest t = new ThreadTest();
-        t.start();
+        Thread th = new Thread(t);
+        th.start();
         int i = 1;
 
         while(true)
