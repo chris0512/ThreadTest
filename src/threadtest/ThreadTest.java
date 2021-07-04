@@ -1,8 +1,7 @@
 package threadtest;
 
-public class ThreadTest implements Runnable
+class MyRunnable implements Runnable
 {
-
     public void run()
     {
         int i = 1;
@@ -13,10 +12,14 @@ public class ThreadTest implements Runnable
         }
     }
 
+}
+
+public class ThreadTest
+{
 
     public static void main(String[] args)
     {
-        ThreadTest t = new ThreadTest();
+        MyRunnable t = new MyRunnable();
         Thread th = new Thread(t);
         th.start();
         int i = 1;
